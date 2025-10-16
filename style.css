@@ -1,0 +1,74 @@
+/* style.css 檔案內容 */
+
+body {
+    /* 確保 body 有足夠的高度來顯示圖片 */
+    min-height: 100vh; 
+    
+    /* (1) 設定背景圖片 */
+    background-image: url('images/background.jpg'); 
+    
+    /* (2) 控制圖片重複：'no-repeat' 表示圖片只出現一次 */
+    background-repeat: no-repeat; 
+    
+    /* (3) 控制圖片大小：'cover' 表示圖片會覆蓋整個背景，可能會裁切部分圖片 */
+    background-size: cover; 
+    
+    /* (4) 控制圖片是否捲動：'fixed' 表示背景圖片固定不動，只有文字內容捲動 */
+    background-attachment: fixed; 
+
+    /* 其他保持不變的樣式 */
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* 設定整個單字區塊為彈性佈局，讓內容可以水平排列 */
+.word-item {
+    display: flex;
+    align-items: center; /* 垂直置中對齊 */
+    
+    /* 增加半透明背景，讓文字在背景圖上清晰可見 */
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: 25px; /* 增加區塊之間的垂直間距 */
+    padding: 15px;
+    border-bottom: none; 
+}
+
+/* 單字本身的樣式 */
+.word {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 30px; /* 增加單字與後方內容的水平間距 */
+    width: 150px; /* 設置固定寬度，讓所有單字對齊 */
+}
+
+/* 圖片的樣式 */
+.word-item img {
+    width: 80px;  /* 圖片寬度 */
+    height: 80px; /* 圖片高度 */
+    object-fit: cover; /* 確保圖片填充區域而不變形 */
+    margin-right: 20px; /* 圖片與單字的間距 */
+    border-radius: 8px; /* 圓角效果 */
+}
+
+/* 按鈕的樣式 */
+button {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: auto; /* 讓按鈕自動推到最右邊 */
+}
+
+button:hover {
+    background-color: #45a049;
+}}
